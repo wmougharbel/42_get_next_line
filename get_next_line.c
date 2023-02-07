@@ -30,6 +30,8 @@ char	*ft_read_str(int fd, char *s)
 		if (bytes == -1)
 		{
 			free(buff);
+			if (s)
+				free(s);
 			return (NULL);
 		}
 		buff[bytes] = '\0';
